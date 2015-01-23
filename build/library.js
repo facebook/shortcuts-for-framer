@@ -446,11 +446,14 @@
 
   Layer.prototype.show = function() {
     this.opacity = 1;
+    this.visible = true;
+    this.style.pointerEvents = 'auto';
     return this;
   };
 
   Layer.prototype.hide = function() {
     this.opacity = 0;
+    this.visible = false;
     this.style.pointerEvents = 'none';
     return this;
   };
