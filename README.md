@@ -4,12 +4,14 @@ A collection of useful functions to make mobile prototyping with [Framer](http:/
 
 ## How to use with Framer Studio
 
-* Save your project and open the project folder
-* Download [library.js](https://rawgit.com/facebook/shortcuts-for-framer/master/build/library.js) into the `framer` folder inside of your project folder
-* Open `index.html` from your project folder with a text editor and right after the line `<script src="framer/init.js"></script>`, add the following line:
+* Create a new Framer project
+* Put shortcuts.coffee in the project/modules folder
+* Import shortcuts with `shortcuts = require "shortcuts"`
 
-```<script src="framer/library.js"></script>``` 
+## How to use with Framer.js
 
+* Add the build/shortcuts.js file to your head in index.html
+* `<script src="shortcuts.js"></script>`
 
 ## General
 * After importing your PSD/Sketch layers, call initialize to create global Javascript variables for every layer for quick access:
@@ -43,7 +45,7 @@ Framer.Shortcuts.initialize(myLayers)
 * *`Framer.utils.convertRange`* is deprecated in favor of the native `Utils.modulate`. Check [Framer docs](http://framerjs.com/docs/#utils.modulate) on how to use modulate.
 
 ## Customization
-All the animation functions use curves and times that can be customized. Check the very top of `library.js` to see all the options.
+All the animation functions use curves and times that can be customized. Check the very top of `shortcuts.js` to see all the options.
 
 # Questions
 
